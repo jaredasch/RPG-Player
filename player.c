@@ -9,7 +9,7 @@ struct player {
 
 struct player random_player(char* name){
 	struct player p;
-	p.hp = rand() % 1000;
+	p.hp = rand() % 900 + 100;
 	p.name = name;
 	return p;
 }
@@ -34,16 +34,29 @@ int main(){
 	struct player p1 = random_player("Jared");
 	struct player p2 = random_player("Mark");
 
+	printf("Testing print functions\n");
 	print_player(p1);
 	print_player(p2);
 
+	printf("\nTesting attack functions\n");
 	attack(&p1, 1);
-	printf("Expecting p1 to have 1 less HP...\n");
+	printf("Expecting Jared to have 1 less HP...\n");
 	print_player(p1);
 
+	printf("\n");
 	attack(&p1, 1000);
-        printf("Expecting p1 to be dead...\n");
-        print_player(p1);
+    printf("Expecting Jared to be dead :(\n");
+    print_player(p1);
+
+    printf("\n");
+	attack(&p2, 100);
+	printf("Expecting Mark to have 100 less HP...\n");
+	print_player(p2);
+
+	printf("\n");
+	attack(&p2, 1000);
+    printf("Expecting Mark to be dead :(\n");
+    print_player(p2);
 
 	return 0;
 }
