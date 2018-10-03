@@ -66,8 +66,8 @@ int main(){
 
     printf("Mark and Jared have been brought back to life for a battle: \n");
 
-    struct player p1 = random_player("Jared");
-    struct player p2 = random_player("Mark");
+    p1 = random_player("Jared");
+    p2 = random_player("Mark");
 
     print_player(p1);
     print_player(p2);
