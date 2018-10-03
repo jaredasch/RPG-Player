@@ -37,32 +37,32 @@ void print_player(struct player p){
 int main(){
     srand(time(NULL));
 
-    // struct player p1 = random_player("Jared");
-    // struct player p2 = random_player("Mark");
-    //
-    // printf("Testing print functions\n");
-    // print_player(p1);
-    // print_player(p2);
-    //
-    // printf("\nTesting attack functions\n");
-    // attack(&p1, 1);
-    // printf("Expecting Jared to have 1 less HP...\n");
-    // print_player(p1);
-    //
-    // printf("\n");
-    // attack(&p1, 1000);
-    // printf("Expecting Jared to be dead :(\n");
-    // print_player(p1);
-    //
-    // printf("\n");
-    // attack(&p2, 100);
-    // printf("Expecting Mark to have 100 less HP...\n");
-    // print_player(p2);
-    //
-    // printf("\n");
-    // attack(&p2, 1000);
-    // printf("Expecting Mark to be dead :(\n");
-    // print_player(p2);
+    struct player p1 = random_player("Jared");
+    struct player p2 = random_player("Mark");
+
+    printf("Testing print functions\n");
+    print_player(p1);
+    print_player(p2);
+
+    printf("\nTesting attack functions\n");
+    attack(&p1, 1);
+    printf("Expecting Jared to have 1 less HP...\n");
+    print_player(p1);
+
+    printf("\n");
+    attack(&p1, 1000);
+    printf("Expecting Jared to be dead :(\n");
+    print_player(p1);
+
+    printf("\n");
+    attack(&p2, 100);
+    printf("Expecting Mark to have 100 less HP...\n");
+    print_player(p2);
+
+    printf("\n");
+    attack(&p2, 1000);
+    printf("Expecting Mark to be dead :(\n");
+    print_player(p2);
 
     printf("Mark and Jared have been brought back to life for a battle: \n");
 
